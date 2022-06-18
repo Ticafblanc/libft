@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dup_cpp.c                                       :+:      :+:    :+:   */
+/*   check_invisible_characters.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdoquocb <mdoquocb@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,27 +12,9 @@
 
 #include <libft.h>
 
-char	**ft_dup_cpp(char **argv)
+int	check_invisible_characters(char c)
 {
-	char	**str;
-	int		len_pp;
-	int		i;
-
-	i = 0;
-	len_pp = ft_len_pp((void **)argv);
-	str = (char **)malloc(sizeof(char *) * (len_pp + 1));
-	if (!str)
-		return (NULL);
-	while (argv[i])
-	{
-		str[i] = ft_strdup(argv[i]);
-		if (!str[i])
-		{
-			ft_free_pp((void **)str);
-			return (NULL);
-		}
-		i++;
-	}
-	str[i] = NULL;
-	return (str);
+	if (c == 32 || (c >= 9 && c <= 13))
+		return (1);
+	return (0);
 }

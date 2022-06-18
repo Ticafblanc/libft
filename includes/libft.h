@@ -55,6 +55,7 @@ int			ft_isprint(int c);
 int			ft_check_limit_int(long long stk);
 int			ft_check_extension(char *str, char *extension);
 long long	timestamp(void);
+int			check_invisible_characters(char c);
 
 	//change_value
 
