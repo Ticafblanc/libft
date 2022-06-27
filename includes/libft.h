@@ -73,11 +73,13 @@ char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strdup(const char *s1);
 char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *s, char c);
+char		**ft_split_invisible_character(char *command);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char		*ft_itoa(int n);
 void		ft_free_pp(void **argv);
 long long	ft_len_pp(void **argv);
 char		**ft_dup_cpp(char **argv);
+char		*ft_strtok(char *str, const char delim);
 
 	//str>>
 
